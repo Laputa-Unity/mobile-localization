@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7f7a8ed0432d74c9fe47a56665447c, type: 3}
+  m_Name: LocalizationConfig
+  m_EditorClassIdentifier: 
+  languageDataList:
+  - languageName: 0
+    encode: en
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 1
+    encode: ja
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 2
+    encode: de
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 3
+    encode: ko
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 4
+    encode: ru
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 5
+    encode: pt
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 6
+    encode: fr
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  - languageName: 7
+    encode: vi
+    font: {fileID: 0}
+    tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
