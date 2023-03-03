@@ -12,7 +12,9 @@
 
 Add the lines below to ```Packages/manifest.json```
 
-```"com.laputa.localization": "https://github.com/Laputa-Unity/localization#1.0.0",```
+``` csharp
+"com.laputa.localization": "https://github.com/Laputa-Unity/localization#1.0.0",
+```
 ## Usage
 ### Config
 You can add or remove country language in ```LocalizationConfig```
