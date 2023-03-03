@@ -4,42 +4,46 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LocalizationConfig", menuName = "ScriptableObject/LocalizationConfig")]
-public class LocalizationConfig : ScriptableObject
+namespace Laputa.Localization
 {
-    public List<LanguageData> languageDataList;
-
-    public void UpdateLanguageData()
+    [CreateAssetMenu(fileName = "LocalizationConfig", menuName = "ScriptableObject/LocalizationConfig")]
+    public class LocalizationConfig : ScriptableObject
     {
-        for (int i = 0; i < Enum.GetNames(typeof(LanguageName)).Length; i++)
+        public List<LanguageData> languageDataList;
+
+        public void UpdateLanguageData()
         {
-            LanguageData data = new LanguageData {languageName = (LanguageName) i};
-            if (!IsContainItem(data.languageName))
+            for (int i = 0; i < Enum.GetNames(typeof(LanguageName)).Length; i++)
             {
-                languageDataList.Add(data);
+                LanguageData data = new LanguageData {languageName = (LanguageName) i};
+                if (!IsContainItem(data.languageName))
+                {
+                    languageDataList.Add(data);
+                }
             }
+
+            languageDataList = languageDataList.GroupBy(item => item.languageName).Select(group => group.First()).ToList();
         }
 
-        languageDataList = languageDataList.GroupBy(item => item.languageName).Select(group => group.First()).ToList();
-    }
-
-    private bool IsContainItem(LanguageName languageName)
-    {
-        foreach (LanguageData data in languageDataList)
+        private bool IsContainItem(LanguageName languageName)
         {
-            if (data.languageName == languageName) return true;
+            foreach (LanguageData data in languageDataList)
+            {
+                if (data.languageName == languageName) return true;
+            }
+
+            return false;
         }
-
-        return false;
     }
-}
 
-[Serializable]
-public struct LanguageData
-{
-    public LanguageName languageName;
-    public string encode;
-    public Font font;
-    public TMP_FontAsset tmpFontAsset;
+    [Serializable]
+    public struct LanguageData
+    {
+        public LanguageName languageName;
+        public string encode;
+        public Sprite sprite;
+        public Font font;
+        public TMP_FontAsset tmpFontAsset;
 
+    }
 }

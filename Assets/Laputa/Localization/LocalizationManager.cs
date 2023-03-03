@@ -4,35 +4,38 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-public static class LocalizationManager
+namespace Laputa.Localization
 {
-    public static LanguageName currentLanguageName = LanguageName.English;
-    private static readonly HttpClient Client = new HttpClient();
-
-    public static void OnChangeLanguage(LanguageName languageName)
+    public static class LocalizationManager
     {
-        currentLanguageName = languageName;
-        LocalizationObserver.onLanguageChanged?.Invoke(languageName);
+        public static LanguageName CurrentLanguageName = LanguageName.English;
+        private static readonly HttpClient Client = new HttpClient();
+
+        public static void OnChangeLanguage(LanguageName languageName)
+        {
+            CurrentLanguageName = languageName;
+            LocalizationObserver.onLanguageChanged?.Invoke(languageName);
+        }
+
+        public static async Task<string> TranslateAsync(string text, string targetLanguage, string sourceLanguage = "auto")
+        {
+            string url = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={sourceLanguage}&tl={targetLanguage}&dt=t&q={Uri.EscapeDataString(text)}";
+
+            HttpResponseMessage response = await Client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+
+            Debug.Log(response.EnsureSuccessStatusCode());
+        
+            string responseBody = await response.Content.ReadAsStringAsync();
+            JArray responseJson = JArray.Parse(responseBody);
+        
+
+            return (string) responseJson[0][0]?[0];
+        }
     }
 
-    public static async Task<string> TranslateAsync(string text, string targetLanguage, string sourceLanguage = "en")
+    public static class LocalizationObserver
     {
-        string url = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={sourceLanguage}&tl={targetLanguage}&dt=t&q={Uri.EscapeDataString(text)}";
-
-        HttpResponseMessage response = await Client.GetAsync(url);
-        response.EnsureSuccessStatusCode();
-
-        Debug.Log(response.EnsureSuccessStatusCode());
-        
-        string responseBody = await response.Content.ReadAsStringAsync();
-        JArray responseJson = JArray.Parse(responseBody);
-        
-
-        return (string) responseJson[0][0]?[0];
+        public static Action<LanguageName> onLanguageChanged;
     }
-}
-
-public static class LocalizationObserver
-{
-    public static Action<LanguageName> onLanguageChanged;
 }

@@ -1,25 +1,24 @@
+using Laputa.Localization.Components;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(LocalizedText))]
-public class LocalizedTextEditor : Editor
+namespace Laputa.Localization.Editor
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(LocalizedText))]
+    public class LocalizedTextEditor : UnityEditor.Editor
     {
-        base.OnInspectorGUI();
-        var localizedText = (LocalizedText) target;
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            var localizedText = (LocalizedText) target;
  
-        if(GUILayout.Button("Auto generate (require internet)", GUILayout.Height(40)))
-        {
-            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
-            localizedText.AutoGenerate();
-        }
-        
-        if(GUILayout.Button("Update Current Language", GUILayout.Height(40)))
-        {
-            localizedText.UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
-        }
+            if(GUILayout.Button("Auto generate (require internet)", GUILayout.Height(40)))
+            {
+                // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+                localizedText.AutoGenerate();
+            }
 
-        serializedObject.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedProperties();
+        }
     }
 }

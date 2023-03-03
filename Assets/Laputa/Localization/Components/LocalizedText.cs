@@ -5,102 +5,150 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LocalizedText : MonoBehaviour
+namespace Laputa.Localization.Components
 {
-    [SerializeField] [ReadOnly] private string currentText;
-    [SerializeField] private List<LanguageLocalizedData> languageDataList = new List<LanguageLocalizedData>();
-    private TextMeshProUGUI TextMeshProUGUI => GetComponent<TextMeshProUGUI>();
-    private Text Text => GetComponent<Text>();
+    public class LocalizedText : MonoBehaviour
+    {
+        [SerializeField] [ReadOnly] private string currentText;
+        [SerializeField] private List<LanguageLocalizedData> languageDataList = new List<LanguageLocalizedData>();
+        [SerializeField] private List<LocalizedDataText> localizedDataTextList = new List<LocalizedDataText>();
+        private TextMeshProUGUI TextMeshProUGUI => GetComponent<TextMeshProUGUI>();
+        private Text Text => GetComponent<Text>();
     
-    public void OnDrawGizmos()
-    {
-        if (TextMeshProUGUI == null && Text == null)
+        public void OnDrawGizmos()
         {
-            gameObject.AddComponent<TextMeshProUGUI>();
-        }
-        currentText = TextMeshProUGUI ? TextMeshProUGUI.text : Text.text;
-    }
-
-    private void Awake()
-    {
-        LocalizationObserver.onLanguageChanged += UpdateCurrentLanguage;
-    }
-
-    private void OnDestroy()
-    {
-        LocalizationObserver.onLanguageChanged -= UpdateCurrentLanguage;
-    }
-
-    public void UpdateCurrentLanguage(LanguageName languageName)
-    {
-        LanguageLocalizedData data = languageDataList.Find(item =>
-            item.languageData.languageName == LocalizationManager.currentLanguageName);
-
-        if (TextMeshProUGUI)
-        {
-            TextMeshProUGUI.text = data.text;
-            TextMeshProUGUI.font = data.languageData.tmpFontAsset;
-        }
-        else
-        {
-            Text.text = data.text;
-            Text.font = data.languageData.font;
-        }
-    }
-
-    public async void AutoGenerate()
-    {
-        Debug.Log("<color=green> Start generating ... </color>");
-        LocalizationConfig localizationConfig= Resources.Load<LocalizationConfig>("LocalizationConfig");
-
-        if (localizationConfig)
-        {
-            try
+            if (Application.isPlaying) return;
+            if (TextMeshProUGUI == null && Text == null)
             {
-                foreach (var data in localizationConfig.languageDataList)
+                gameObject.AddComponent<TextMeshProUGUI>();
+            }
+            currentText = TextMeshProUGUI ? TextMeshProUGUI.text : Text.text;
+        }
+
+        private void Awake()
+        {
+            LocalizationObserver.onLanguageChanged += UpdateCurrentLanguage;
+        }
+
+        private void OnDestroy()
+        {
+            LocalizationObserver.onLanguageChanged -= UpdateCurrentLanguage;
+        }
+
+        private void OnEnable()
+        {
+            UpdateCurrentLanguage(LocalizationManager.CurrentLanguageName);
+        }
+
+        private void UpdateLocalizedDataText()
+        {
+            if (TextMeshProUGUI)
+            {
+                foreach (LocalizedDataText text in localizedDataTextList)
                 {
-                    LanguageLocalizedData languageLocalizedData = GetLanguage(data);
-                    string translatedText = await LocalizationManager.TranslateAsync(currentText, data.encode);
-                
-                    if (languageLocalizedData != null)
+                    TextMeshProUGUI.text = TextMeshProUGUI.text.Replace("{" +$"{text.wordReplace}" + "}", text.value);
+                }
+            }
+            else
+            {
+                foreach (LocalizedDataText text in localizedDataTextList)
+                {
+                    Text.text = Text.text.Replace($"{text.wordReplace}", text.value);
+                }
+            }
+        }
+
+        private void UpdateCurrentLanguage(LanguageName languageName)
+        {
+            LanguageLocalizedData data = languageDataList.Find(item =>
+                item.languageData.languageName == LocalizationManager.CurrentLanguageName);
+
+            if (TextMeshProUGUI)
+            {
+                TextMeshProUGUI.text = data.text;
+                TextMeshProUGUI.font = data.languageData.tmpFontAsset;
+            }
+            else
+            {
+                Text.text = data.text;
+                Text.font = data.languageData.font;
+            }
+            UpdateLocalizedDataText();
+        }
+
+        public async void AutoGenerate()
+        {
+            Debug.Log("<color=green> Start generating ... </color>");
+            LocalizationConfig localizationConfig= Resources.Load<LocalizationConfig>("LocalizationConfig");
+
+            if (localizationConfig)
+            {
+                try
+                {
+                    foreach (var data in localizationConfig.languageDataList)
                     {
-                        if (!languageLocalizedData.save)
+                        LanguageLocalizedData languageLocalizedData = GetLanguage(data);
+                        string translatedText = await LocalizationManager.TranslateAsync(currentText, data.encode);
+                
+                        if (languageLocalizedData != null)
                         {
-                            languageLocalizedData.text = translatedText;
-                            languageLocalizedData.languageData.font = data.font;
-                            languageLocalizedData.languageData.tmpFontAsset = data.tmpFontAsset;
+                            if (!languageLocalizedData.save)
+                            {
+                                languageLocalizedData.text = translatedText;
+                                languageLocalizedData.languageData.font = data.font;
+                                languageLocalizedData.languageData.tmpFontAsset = data.tmpFontAsset;
+                            }
+                        }
+                        else
+                        {
+                            languageLocalizedData = new LanguageLocalizedData {languageData = data,text = translatedText};
+                            languageDataList.Add(languageLocalizedData);
                         }
                     }
-                    else
-                    {
-                        languageLocalizedData = new LanguageLocalizedData {languageData = data,text = translatedText};
-                        languageDataList.Add(languageLocalizedData);
-                    }
+                    Debug.Log("<color=green> Update succeed </color>");
                 }
-                Debug.Log("<color=green> Update succeed </color>");
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e);
-                throw;
+                Debug.LogWarning("Missing LocalizationConfig.asset");
             }
         }
-        else
+
+        private LanguageLocalizedData GetLanguage(LanguageData languageData)
         {
-            Debug.LogWarning("Missing LocalizationConfig.asset");
+            return languageDataList.Find(item => item.languageData.languageName == languageData.languageName);
+        }
+    
+        public void SetValue(string word, string val)
+        {
+            foreach (LocalizedDataText text in localizedDataTextList)
+            {
+                if (text.wordReplace == word)
+                {
+                    text.value = val;
+                    UpdateCurrentLanguage(LocalizationManager.CurrentLanguageName);
+                }
+            }
         }
     }
 
-    private LanguageLocalizedData GetLanguage(LanguageData languageData)
+    [Serializable]
+    public class LanguageLocalizedData
     {
-        return languageDataList.Find(item => item.languageData.languageName == languageData.languageName);
+        public bool save;
+        public LanguageData languageData;
+        public string text;
     }
-}
 
-[Serializable]
-public class LanguageLocalizedData
-{
-    public bool save;
-    public LanguageData languageData;
-    public string text;
+    [Serializable]
+    public class LocalizedDataText
+    {
+        public string wordReplace;
+        public string value;
+    }
 }

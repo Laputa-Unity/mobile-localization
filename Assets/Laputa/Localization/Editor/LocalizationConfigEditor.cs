@@ -1,19 +1,22 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(LocalizationConfig))]
-public class LocalizationConfigEditor : Editor
+namespace Laputa.Localization.Editor
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(LocalizationConfig))]
+    public class LocalizationConfigEditor : UnityEditor.Editor
     {
-        base.OnInspectorGUI();
-        var localizationConfig = (LocalizationConfig) target;
- 
-        if(GUILayout.Button("Update Data", GUILayout.Height(40)))
+        public override void OnInspectorGUI()
         {
-            localizationConfig.UpdateLanguageData();
-        }
+            base.OnInspectorGUI();
+            var localizationConfig = (LocalizationConfig) target;
+ 
+            if(GUILayout.Button("Update Data", GUILayout.Height(40)))
+            {
+                localizationConfig.UpdateLanguageData();
+            }
 
-        serializedObject.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedProperties();
+        }
     }
 }

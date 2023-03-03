@@ -1,12 +1,15 @@
-public enum LanguageName
+namespace Laputa.Localization
 {
-    English,
-    Japanese, 
-    German, 
-    Korean, 
-    Russian, 
-    Portuguese, 
-    French, 
-    Vietnamese,
+    public enum LanguageName
+    {
+        English,
+        Japanese, 
+        German, 
+        Korean, 
+        Russian, 
+        Portuguese, 
+        French, 
+        Vietnamese,
+    }
 }
 

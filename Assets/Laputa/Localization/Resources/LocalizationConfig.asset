@@ -15,33 +15,41 @@ MonoBehaviour:
   languageDataList:
   - languageName: 0
     encode: en
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 1
     encode: ja
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 2
     encode: de
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 3
     encode: ko
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 4
     encode: ru
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 5
     encode: pt
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 6
     encode: fr
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
   - languageName: 7
     encode: vi
-    font: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}

@@ -1,19 +1,23 @@
+using Laputa.Localization.Components;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(LocalizedDropdown))]
-public class LocalizedDropdownEditor : Editor
+namespace Laputa.Localization.Editor
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(LocalizedDropdown))]
+    public class LocalizedDropdownEditor : UnityEditor.Editor
     {
-        base.OnInspectorGUI();
-        var localizedDropdown = (LocalizedDropdown) target;
- 
-        if(GUILayout.Button("Update Data", GUILayout.Height(40)))
+        public override void OnInspectorGUI()
         {
-            localizedDropdown.UpdateOptions();
-        }
+            base.OnInspectorGUI();
+            var localizedDropdown = (LocalizedDropdown) target;
+ 
+            if(GUILayout.Button("Update Data", GUILayout.Height(40)))
+            {
+                localizedDropdown.UpdateOptions();
+            }
 
-        serializedObject.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedProperties();
+        }
     }
 }
