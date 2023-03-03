@@ -4,4 +4,20 @@
   "description": "laputa localization",
   "version": "1.0.0",
   "unity": "2022.2",
+  "category": "plugin",
+  "author": {
+    "name": "hoangvanthu",
+    "email": "guardian.of.gods99@gmail.com",
+    "url": "https://github.com/GuardianOfGods"
+  },
+  "license": "MIT",
+  "keywords": [ "unity" ],
+  "dependencies": {
+	"com.unity.textmeshpro": "3.0.6",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Laputa-Unity/localization.git",
+    "directory": "localization"
+  },
 }
