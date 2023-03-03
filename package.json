@@ -13,11 +13,11 @@
   "license": "MIT",
   "keywords": [ "unity" ],
   "dependencies": {
-	"com.unity.textmeshpro": "3.0.6",
+	"com.unity.textmeshpro": "3.0.6"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:Laputa-Unity/localization.git",
     "directory": "localization"
-  },
+  }
 }

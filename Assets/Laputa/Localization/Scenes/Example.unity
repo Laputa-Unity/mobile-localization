@@ -803,79 +803,65 @@ MonoBehaviour:
       languageName: 0
       encode: en
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: This random sentence generator is a tool that creates random sentences
-      to inspire creativity. Over 500 random sentences to discover
+    text: TMP Text
   - save: 0
     languageData:
       languageName: 1
       encode: ja
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "\u3053\u306E\u30E9\u30F3\u30C0\u30E0 \u30BB\u30F3\u30C6\u30F3\u30B9 \u30B8\u30A7\u30CD\u30EC\u30FC\u30BF\u30FC\u306F\u3001\u5275\u9020\u6027\u3092\u523A\u6FC0\u3059\u308B\u30E9\u30F3\u30C0\u30E0\u306A\u30BB\u30F3\u30C6\u30F3\u30B9\u3092\u4F5C\u6210\u3059\u308B\u30C4\u30FC\u30EB\u3067\u3059\u3002"
+    text: "TMP \u30C6\u30AD\u30B9\u30C8"
   - save: 0
     languageData:
       languageName: 2
       encode: de
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "Dieser Zufallssatzgenerator ist ein Werkzeug, das zuf\xE4llige S\xE4tze
-      erstellt, um die Kreativit\xE4t anzuregen. "
+    text: TMP-Text
   - save: 0
     languageData:
       languageName: 3
       encode: ko
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "\uC774 \uC784\uC758\uC758 \uBB38\uC7A5 \uC0DD\uC131\uAE30\uB294 \uCC3D\uC758\uB825\uC744
-      \uACE0\uCDE8\uD558\uAE30 \uC704\uD574 \uC784\uC758\uC758 \uBB38\uC7A5\uC744
-      \uC0DD\uC131\uD558\uB294 \uB3C4\uAD6C\uC785\uB2C8\uB2E4. "
+    text: "TMP \uD14D\uC2A4\uD2B8"
   - save: 0
     languageData:
       languageName: 4
       encode: ru
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "\u042D\u0442\u043E\u0442 \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440
-      \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0445 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439
-      \u2014 \u044D\u0442\u043E \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442,
-      \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0441\u043E\u0437\u0434\u0430\u0435\u0442
-      \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F,
-      \u0447\u0442\u043E\u0431\u044B \u0432\u0434\u043E\u0445\u043D\u043E\u0432\u0438\u0442\u044C
-      \u043D\u0430 \u0442\u0432\u043E\u0440\u0447\u0435\u0441\u0442\u0432\u043E. "
+    text: "\u0422\u0435\u043A\u0441\u0442 \u0422\u041C\u041F"
   - save: 0
     languageData:
       languageName: 5
       encode: pt
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "Este gerador de frases aleat\xF3rias \xE9 uma ferramenta que cria frases
-      aleat\xF3rias para inspirar criatividade. "
+    text: Texto TMP
   - save: 0
     languageData:
       languageName: 6
       encode: fr
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "Ce g\xE9n\xE9rateur de phrases al\xE9atoires est un outil qui cr\xE9e
-      des phrases al\xE9atoires pour inspirer la cr\xE9ativit\xE9. "
+    text: Texte TMP
   - save: 0
     languageData:
       languageName: 7
       encode: vi
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-    text: "Tr\xECnh t\u1EA1o c\xE2u ng\u1EABu nhi\xEAn n\xE0y l\xE0 m\u1ED9t c\xF4ng
-      c\u1EE5 t\u1EA1o ra c\xE1c c\xE2u ng\u1EABu nhi\xEAn \u0111\u1EC3 truy\u1EC1n
-      c\u1EA3m h\u1EE9ng s\xE1ng t\u1EA1o. "
+    text: "V\u0103n b\u1EA3n TMP"
   localizedDataTextList: []
 --- !u!114 &524432981
 MonoBehaviour:
@@ -1476,7 +1462,7 @@ MonoBehaviour:
       languageName: 0
       encode: en
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: I have {a} cats and {b} dogs
   - save: 0
@@ -1484,7 +1470,7 @@ MonoBehaviour:
       languageName: 1
       encode: ja
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: "{a}\u5339\u306E\u732B\u3068{b}\u5339\u306E\u72AC\u3092\u98FC\u3063\u3066\u3044\u307E\u3059"
   - save: 0
@@ -1492,7 +1478,7 @@ MonoBehaviour:
       languageName: 2
       encode: de
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: Ich habe {a} Katzen und {b} Hunde
   - save: 0
@@ -1500,7 +1486,7 @@ MonoBehaviour:
       languageName: 3
       encode: ko
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: "\uB098\uB294 {a} \uACE0\uC591\uC774\uC640 {b} \uAC1C\uB97C \uAC00\uC9C0\uACE0
       \uC788\uC2B5\uB2C8\uB2E4"
@@ -1509,7 +1495,7 @@ MonoBehaviour:
       languageName: 4
       encode: ru
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: "\u0423 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C {a} \u043A\u043E\u0448\u0435\u043A
       \u0438 {b} \u0441\u043E\u0431\u0430\u043A"
@@ -1518,7 +1504,7 @@ MonoBehaviour:
       languageName: 5
       encode: pt
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: Eu tenho {a} gatos e {b} cachorros
   - save: 0
@@ -1526,7 +1512,7 @@ MonoBehaviour:
       languageName: 6
       encode: fr
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: J'ai {a} chats et {b} chiens
   - save: 0
@@ -1534,7 +1520,7 @@ MonoBehaviour:
       languageName: 7
       encode: vi
       sprite: {fileID: 0}
-      font: {fileID: 0}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
     text: "T\xF4i c\xF3 {a} con m\xE8o v\xE0 {b} con ch\xF3"
   localizedDataTextList:
