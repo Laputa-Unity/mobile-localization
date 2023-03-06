@@ -13,7 +13,7 @@
 Add the lines below to ```Packages/manifest.json``` or download in the release tag
 
 ``` csharp
-"com.laputa.localization": "https://github.com/Laputa-Unity/localization#1.0.0",
+"com.laputa.localization": "https://github.com/Laputa-Unity/localization.git#1.0.0",
 ```
 ## Usage
 ### Config
