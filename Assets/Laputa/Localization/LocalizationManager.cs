@@ -8,26 +8,26 @@ namespace Laputa.Localization
 {
     public static class LocalizationManager
     {
-        public static LanguageName CurrentLanguageName = LanguageName.English;
+        public static LanguageName currentLanguageName = LanguageName.English;
         private static readonly HttpClient Client = new HttpClient();
 
         public static void OnChangeLanguage(LanguageName languageName)
         {
-            CurrentLanguageName = languageName;
+            currentLanguageName = languageName;
             LocalizationObserver.onLanguageChanged?.Invoke(languageName);
         }
 
         public static async Task<string> TranslateAsync(string text, string targetLanguage, string sourceLanguage = "auto")
         {
-            string url = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={sourceLanguage}&tl={targetLanguage}&dt=t&q={Uri.EscapeDataString(text)}";
+            var url = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={sourceLanguage}&tl={targetLanguage}&dt=t&q={Uri.EscapeDataString(text)}";
 
-            HttpResponseMessage response = await Client.GetAsync(url);
+            var response = await Client.GetAsync(url);
             response.EnsureSuccessStatusCode();
 
             Debug.Log(response.EnsureSuccessStatusCode());
         
             string responseBody = await response.Content.ReadAsStringAsync();
-            JArray responseJson = JArray.Parse(responseBody);
+            var responseJson = JArray.Parse(responseBody);
         
 
             return (string) responseJson[0][0]?[0];

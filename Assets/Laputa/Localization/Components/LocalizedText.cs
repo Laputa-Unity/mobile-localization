@@ -37,21 +37,21 @@ namespace Laputa.Localization.Components
 
         private void OnEnable()
         {
-            UpdateCurrentLanguage(LocalizationManager.CurrentLanguageName);
+            UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
         }
 
         private void UpdateLocalizedDataText()
         {
             if (TextMeshProUGUI)
             {
-                foreach (LocalizedDataText text in localizedDataTextList)
+                foreach (var text in localizedDataTextList)
                 {
                     TextMeshProUGUI.text = TextMeshProUGUI.text.Replace("{" +$"{text.wordReplace}" + "}", text.value);
                 }
             }
             else
             {
-                foreach (LocalizedDataText text in localizedDataTextList)
+                foreach (var text in localizedDataTextList)
                 {
                     Text.text = Text.text.Replace($"{text.wordReplace}", text.value);
                 }
@@ -61,7 +61,7 @@ namespace Laputa.Localization.Components
         private void UpdateCurrentLanguage(LanguageName languageName)
         {
             LanguageLocalizedData data = languageDataList.Find(item =>
-                item.languageData.languageName == LocalizationManager.CurrentLanguageName);
+                item.languageData.languageName == LocalizationManager.currentLanguageName);
 
             if (TextMeshProUGUI)
             {
@@ -126,12 +126,12 @@ namespace Laputa.Localization.Components
     
         public void SetValue(string word, string val)
         {
-            foreach (LocalizedDataText text in localizedDataTextList)
+            foreach (var text in localizedDataTextList)
             {
                 if (text.wordReplace == word)
                 {
                     text.value = val;
-                    UpdateCurrentLanguage(LocalizationManager.CurrentLanguageName);
+                    UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
                 }
             }
         }
