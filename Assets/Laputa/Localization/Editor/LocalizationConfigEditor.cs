@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,14 +7,25 @@ namespace Laputa.Localization.Editor
     [CustomEditor(typeof(LocalizationConfig))]
     public class LocalizationConfigEditor : UnityEditor.Editor
     {
+        private LocalizationConfig _localizationConfig;
+
+        void OnEnable()
+        {
+            _localizationConfig = (LocalizationConfig) target;
+        }
+
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            var localizationConfig = (LocalizationConfig) target;
- 
-            if(GUILayout.Button("Update Data", GUILayout.Height(40)))
+
+            if(GUILayout.Button("Update Language Data", GUILayout.Height(40)))
             {
-                localizationConfig.UpdateLanguageData();
+                _localizationConfig.UpdateLanguageData();
+            }
+            
+            if(GUILayout.Button("Translate All Predata", GUILayout.Height(40)))
+            {
+                _localizationConfig.TranslateAllPredata();
             }
 
             serializedObject.ApplyModifiedProperties();

@@ -10,7 +10,13 @@ namespace Laputa.Localization
     public class LocalizationConfig : ScriptableObject
     {
         public List<LanguageData> languageDataList;
+        public List<LocalizedData> localizedDataList;
 
+        public LanguageData GetLanguageData(LanguageName languageName)
+        {
+            return languageDataList.Find(item => item.languageName == languageName);
+        }
+        
         public void UpdateLanguageData()
         {
             for (int i = 0; i < Enum.GetNames(typeof(LanguageName)).Length; i++)
@@ -34,6 +40,19 @@ namespace Laputa.Localization
 
             return false;
         }
+
+        public void TranslateAllPredata()
+        {
+            foreach (var localizedData in localizedDataList)
+            {
+                localizedData.Localize(this);
+            }
+        }
+
+        // public void GetPretranslate(string content, LanguageName languageName)
+        // {
+        //     return localizedDataList.Find(item => item.GetLocalizedData(languageName))
+        // }
     }
 
     [Serializable]
@@ -44,6 +63,67 @@ namespace Laputa.Localization
         public Sprite sprite;
         public Font font;
         public TMP_FontAsset tmpFontAsset;
+    }
+    
+    [Serializable]
+    public class LocalizedData
+    {
+        public string content;
+        public List<PreLocalizedData> preLocalizedDataList;
 
+        public string GetTranslatedContent(LanguageName languageName)
+        {
+            PreLocalizedData preLocalizedData = GetPreLocalizedData(languageName);
+            return preLocalizedData.translatedContent;
+        }
+
+        public PreLocalizedData GetPreLocalizedData(LanguageName languageName)
+        {
+            return preLocalizedDataList.Find(item => item.languageName == languageName);
+        }
+
+        public async void Localize(LocalizationConfig localizationConfig)
+        {
+            try
+            {
+                Debug.Log("<color=green> Start translating ...</color>");
+                
+                for (int i = 0; i < Enum.GetNames(typeof(LanguageName)).Length; i++)
+                {
+                    LanguageName language = (LanguageName) i;
+                    PreLocalizedData preLocalizedData = GetPreLocalizedData(language);
+                    if (preLocalizedData!=null)
+                    {
+                        preLocalizedData.translatedContent = await LocalizationManager.TranslateAsync(content, localizationConfig.GetLanguageData((LanguageName) i).encode);
+                    }
+                    else
+                    {
+                        PreLocalizedData tempPreLocalizedData = new PreLocalizedData(language, await LocalizationManager.TranslateAsync(content, localizationConfig.GetLanguageData((LanguageName) i).encode));
+                        preLocalizedDataList.Add(tempPreLocalizedData);
+                    }
+                }
+                
+                preLocalizedDataList = preLocalizedDataList.GroupBy(item => item.languageName).Select(group => group.First()).ToList();
+                Debug.Log("<color=green> Update succeed </color>");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+    }
+    
+    [Serializable]
+    public class PreLocalizedData
+    {
+        public LanguageName languageName;
+        public string translatedContent;
+
+        public PreLocalizedData(LanguageName languageName, string content)
+        {
+            this.languageName = languageName;
+            translatedContent = content;
+        }
     }
 }
