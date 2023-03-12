@@ -14,15 +14,11 @@ namespace Laputa.Localization.Components
         [SerializeField] private List<LocalizedDataText> localizedDataTextList = new List<LocalizedDataText>();
         private TextMeshProUGUI TextMeshProUGUI => GetComponent<TextMeshProUGUI>();
         private Text Text => GetComponent<Text>();
-    
-        public void OnDrawGizmos()
+
+        private void OnDrawGizmos()
         {
             if (Application.isPlaying) return;
-            if (TextMeshProUGUI == null && Text == null)
-            {
-                gameObject.AddComponent<TextMeshProUGUI>();
-            }
-            currentText = TextMeshProUGUI ? TextMeshProUGUI.text : Text.text;
+            UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
         }
 
         private void Awake()
@@ -35,34 +31,37 @@ namespace Laputa.Localization.Components
             LocalizationObserver.onLanguageChanged -= UpdateCurrentLanguage;
         }
 
-        private void OnEnable()
+        private LanguageLocalizedData GetLanguageLocalizedData()
         {
-            UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
+            return languageDataList.Find(item => item.languageData.languageName == LocalizationManager.currentLanguageName);
         }
 
         private void UpdateLocalizedDataText()
         {
+            //Debug.Log("Log 1 text");
             if (TextMeshProUGUI)
             {
+                var tmpText = TextMeshProUGUI.text;
                 foreach (var text in localizedDataTextList)
                 {
-                    TextMeshProUGUI.text = TextMeshProUGUI.text.Replace("{" +$"{text.wordReplace}" + "}", text.value);
+                    tmpText = tmpText.Replace("{" +$"{text.wordReplace}" + "}", text.value);
                 }
             }
             else
             {
+                var textLegacy = Text.text;
                 foreach (var text in localizedDataTextList)
                 {
-                    Text.text = Text.text.Replace($"{text.wordReplace}", text.value);
+                    textLegacy = textLegacy.Replace($"{text.wordReplace}", text.value);
                 }
             }
         }
 
-        private void UpdateCurrentLanguage(LanguageName languageName)
+        public void UpdateCurrentLanguage(LanguageName languageName)
         {
-            LanguageLocalizedData data = languageDataList.Find(item =>
-                item.languageData.languageName == LocalizationManager.currentLanguageName);
-
+            var data = GetLanguageLocalizedData();
+            //var languageTemp = data.languageData.languageName;
+            
             if (TextMeshProUGUI)
             {
                 TextMeshProUGUI.text = data.text;
@@ -122,18 +121,6 @@ namespace Laputa.Localization.Components
         private LanguageLocalizedData GetLanguage(LanguageData languageData)
         {
             return languageDataList.Find(item => item.languageData.languageName == languageData.languageName);
-        }
-    
-        public void SetValue(string word, string val)
-        {
-            foreach (var text in localizedDataTextList)
-            {
-                if (text.wordReplace == word)
-                {
-                    text.value = val;
-                    UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
-                }
-            }
         }
     }
 

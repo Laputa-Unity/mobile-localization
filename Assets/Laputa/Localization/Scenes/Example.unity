@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
-  m_sharedMaterial: {fileID: 4336404976236956249, guid: ca0efe860a7dd324490cb78c5813cdf7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: English
+  m_text: Vietnamese
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7535f2e33dc8ee64f860cbe5339bde8b, type: 2}
   m_sharedMaterial: {fileID: 3074828514974314926, guid: 7535f2e33dc8ee64f860cbe5339bde8b, type: 2}
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -695,10 +695,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I have {x} cats and {y} dogs
+  m_text: "{x}\u5339\u306E\u732B\u3068{y}\u5339\u306E\u72AC\u3092\u98FC\u3063\u3066\u3044\u307E\u3059"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5a957ad84462736468cf7d782c84db10, type: 2}
-  m_sharedMaterial: {fileID: -6055660683197500418, guid: 5a957ad84462736468cf7d782c84db10, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1062,7 +1062,7 @@ RectTransform:
   - {fileID: 801837628}
   - {fileID: 1204690321}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1080,14 +1080,13 @@ GameObject:
   - component: {fileID: 797094557}
   - component: {fileID: 797094559}
   - component: {fileID: 797094558}
-  - component: {fileID: 797094560}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &797094557
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1128,7 +1127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text TMP
+  m_text: Random string
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
@@ -1205,31 +1204,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797094556}
   m_CullTransparentMesh: 1
---- !u!114 &797094560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797094556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0633571c062773046962532cb0b7276e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentText: 
-  languageLocalizedData:
-    save: 0
-    languageData:
-      languageName: 0
-      encode: 
-      sprite: {fileID: 0}
-      font: {fileID: 0}
-      tmpFontAsset: {fileID: 0}
-    text: 
-  localizedDataText:
-    wordReplace: 
-    value: 
 --- !u!1 &801837625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1540,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &940133838
 GameObject:
@@ -1659,25 +1633,25 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 8987474}
   m_ItemImage: {fileID: 845301420}
-  m_Value: 0
+  m_Value: 1
   m_Options:
     m_Options:
-    - m_Text: English
-      m_Image: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+    - m_Text: Portuguese
+      m_Image: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
+    - m_Text: Vietnamese
+      m_Image: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
     - m_Text: Japanese
       m_Image: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
     - m_Text: German
       m_Image: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
-    - m_Text: Korean
-      m_Image: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
+    - m_Text: English
+      m_Image: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
     - m_Text: Russian
       m_Image: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
-    - m_Text: Portuguese
-      m_Image: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
     - m_Text: French
       m_Image: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
-    - m_Text: Vietnamese
-      m_Image: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+    - m_Text: Korean
+      m_Image: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2149,7 +2123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text TMP
+  m_text: "\u30C6\u30AD\u30B9\u30C8 TMP"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
@@ -2470,6 +2444,50 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &2032792414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032792416}
+  - component: {fileID: 2032792415}
+  m_Layer: 0
+  m_Name: LocalizationController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2032792415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032792414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8954143cfb95846845ec7513d44f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2032792416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032792414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2035510669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2554,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069056972
 GameObject:
@@ -2574,7 +2592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 457}
+  m_AnchoredPosition: {x: 0, y: 460}
   m_SizeDelta: {x: 541.38, y: 224.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069056974
@@ -2610,7 +2628,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Text legacy
+  m_Text: "\u30C6\u30AD\u30B9\u30C8\u30EC\u30AC\u30B7\u30FC"
 --- !u!222 &2069056975
 CanvasRenderer:
   m_ObjectHideFlags: 0

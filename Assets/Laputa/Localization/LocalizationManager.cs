@@ -15,6 +15,7 @@ namespace Laputa.Localization
         {
             currentLanguageName = languageName;
             LocalizationObserver.onLanguageChanged?.Invoke(languageName);
+            PlayerPrefs.SetString("localization",languageName.ToString());
         }
 
         public static async Task<string> TranslateAsync(string text, string targetLanguage, string sourceLanguage = "auto")
