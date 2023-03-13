@@ -5,16 +5,19 @@
   - **Attach variable**
   - **Have all country icons**
   - **Don't use third party except TextMeshPro**
+- **Project version: Unity 2022.2.2f1**
 ## Demo
 ![Unity_tXKe6USyqO](https://user-images.githubusercontent.com/52252046/222652172-f6ab0ee0-0d81-4439-9109-f50bb1e9af97.gif)
 ## Download
-**For version 1.0.0**
 
-Add the lines below to ```Packages/manifest.json``` or download in the release tag
+Download last version in:
 
-``` csharp
-"com.laputa.localization": "https://github.com/Laputa-Unity/localization.git#1.0.0",
+```csharp
+https://github.com/Laputa-Unity/localization/releases/latest
 ```
+
+or see more in the realease tag
+
 ## Usage
 ### Config
 You can add or remove country language in ```LocalizationConfig```
