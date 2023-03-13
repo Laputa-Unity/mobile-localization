@@ -17,7 +17,7 @@ Download last version in this link:
 https://github.com/Laputa-Unity/localization/releases/latest
 ```
 
-or see more in the [release tag](https://github.com/Laputa-Unity/localization/releases)
+or see more in the [release tag](https://github.com/Laputa-Unity/mobile-localization/releases)
 
 ## Usage
 ### Config
