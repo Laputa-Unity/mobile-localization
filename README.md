@@ -11,13 +11,13 @@
 ![Unity_tXKe6USyqO](https://user-images.githubusercontent.com/52252046/222652172-f6ab0ee0-0d81-4439-9109-f50bb1e9af97.gif)
 ## Download
 
-Download last version in:
+Download last version in this link:
 
 ```csharp
 https://github.com/Laputa-Unity/localization/releases/latest
 ```
 
-or see more in the realease tag
+or see more in the [release tag](https://github.com/Laputa-Unity/localization/releases)
 
 ## Usage
 ### Config
