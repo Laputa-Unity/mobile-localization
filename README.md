@@ -14,7 +14,7 @@
 Download last version in this link:
 
 ```csharp
-https://github.com/Laputa-Unity/localization/releases/latest
+https://github.com/Laputa-Unity/mobile-localization/releases/latest
 ```
 
 or see more in the [release tag](https://github.com/Laputa-Unity/mobile-localization/releases)
