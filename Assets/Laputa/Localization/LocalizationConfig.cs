@@ -49,10 +49,16 @@ namespace Laputa.Localization
             }
         }
 
-        // public void GetPretranslate(string content, LanguageName languageName)
-        // {
-        //     return localizedDataList.Find(item => item.GetLocalizedData(languageName))
-        // }
+        public string GetPreTranslated(string content, LanguageName targetLanguage)
+        {
+            var data = localizedDataList.Find(item => item.content == content);
+            if (data!=null)
+            {
+                return data.GetTranslatedContent(targetLanguage);
+            }
+
+            return null;
+        }
     }
 
     [Serializable]

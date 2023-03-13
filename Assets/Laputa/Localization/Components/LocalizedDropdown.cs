@@ -17,6 +17,11 @@ namespace Laputa.Localization.Components
             UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
         }
 
+        private void OnEnable()
+        {
+            UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
+        }
+
         private void Awake()
         {
             if (TmpDropDown)
