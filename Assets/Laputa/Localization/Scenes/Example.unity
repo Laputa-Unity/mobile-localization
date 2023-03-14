@@ -392,7 +392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vietnamese
+  m_text: English
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7535f2e33dc8ee64f860cbe5339bde8b, type: 2}
   m_sharedMaterial: {fileID: 3074828514974314926, guid: 7535f2e33dc8ee64f860cbe5339bde8b, type: 2}
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "{x}\u5339\u306E\u732B\u3068{y}\u5339\u306E\u72AC\u3092\u98FC\u3063\u3066\u3044\u307E\u3059"
+  m_text: I have {x} cats and {y} dogs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
@@ -785,73 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentText: I have {x} cats and {y} dogs
-  languageDataList:
-  - save: 0
-    languageData:
-      languageName: 0
-      encode: en
-      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: I have {x} cats and {y} dogs
-  - save: 0
-    languageData:
-      languageName: 1
-      encode: ja
-      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "{x}\u5339\u306E\u732B\u3068{y}\u5339\u306E\u72AC\u3092\u98FC\u3063\u3066\u3044\u307E\u3059"
-  - save: 0
-    languageData:
-      languageName: 2
-      encode: de
-      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Ich habe {x} Katzen und {y} Hunde
-  - save: 0
-    languageData:
-      languageName: 3
-      encode: ko
-      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\uACE0\uC591\uC774 {x}\uB9C8\uB9AC\uC640 \uAC1C {y}\uB9C8\uB9AC\uAC00
-      \uC788\uC2B5\uB2C8\uB2E4"
-  - save: 0
-    languageData:
-      languageName: 4
-      encode: ru
-      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\u0423 \u043C\u0435\u043D\u044F {x} \u043A\u043E\u0448\u0435\u043A \u0438
-      {y} \u0441\u043E\u0431\u0430\u043A"
-  - save: 0
-    languageData:
-      languageName: 5
-      encode: pt
-      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Eu tenho {x} gatos e {y} cachorros
-  - save: 0
-    languageData:
-      languageName: 6
-      encode: fr
-      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: J'ai {x} chats et {y} chiens
-  - save: 0
-    languageData:
-      languageName: 7
-      encode: vi
-      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "T\xF4i c\xF3 {x} con m\xE8o v\xE0 {y} con ch\xF3"
+  languageDataList: []
   localizedDataTextList:
   - wordReplace: x
     value: 2
@@ -1633,7 +1567,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 8987474}
   m_ItemImage: {fileID: 845301420}
-  m_Value: 1
+  m_Value: 4
   m_Options:
     m_Options:
     - m_Text: Portuguese
@@ -2123,7 +2057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u30C6\u30AD\u30B9\u30C8 TMP"
+  m_text: Text TMP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
@@ -2213,71 +2147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentText: Text TMP
-  languageDataList:
-  - save: 0
-    languageData:
-      languageName: 0
-      encode: en
-      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Text TMP
-  - save: 0
-    languageData:
-      languageName: 1
-      encode: ja
-      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\u30C6\u30AD\u30B9\u30C8 TMP"
-  - save: 0
-    languageData:
-      languageName: 2
-      encode: de
-      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Text-TMP
-  - save: 0
-    languageData:
-      languageName: 3
-      encode: ko
-      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\uD14D\uC2A4\uD2B8 TMP"
-  - save: 0
-    languageData:
-      languageName: 4
-      encode: ru
-      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\u0422\u0435\u043A\u0441\u0442 \u0422\u041C\u041F"
-  - save: 0
-    languageData:
-      languageName: 5
-      encode: pt
-      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Texto TMP
-  - save: 0
-    languageData:
-      languageName: 6
-      encode: fr
-      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Texte TMP
-  - save: 0
-    languageData:
-      languageName: 7
-      encode: vi
-      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "Nh\u1EAFn tin TMP"
+  languageDataList: []
   localizedDataTextList: []
 --- !u!1 &1903778543
 GameObject:
@@ -2628,7 +2498,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30C6\u30AD\u30B9\u30C8\u30EC\u30AC\u30B7\u30FC"
+  m_Text: Text legacy
 --- !u!222 &2069056975
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2650,69 +2520,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentText: Text legacy
-  languageDataList:
-  - save: 0
-    languageData:
-      languageName: 0
-      encode: en
-      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Text legacy
-  - save: 0
-    languageData:
-      languageName: 1
-      encode: ja
-      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\u30C6\u30AD\u30B9\u30C8\u30EC\u30AC\u30B7\u30FC"
-  - save: 0
-    languageData:
-      languageName: 2
-      encode: de
-      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Texterbe
-  - save: 0
-    languageData:
-      languageName: 3
-      encode: ko
-      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\uD14D\uC2A4\uD2B8 \uC720\uC0B0"
-  - save: 0
-    languageData:
-      languageName: 4
-      encode: ru
-      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\u0422\u0435\u043A\u0441\u0442\u043E\u0432\u043E\u0435 \u043D\u0430\u0441\u043B\u0435\u0434\u0438\u0435"
-  - save: 0
-    languageData:
-      languageName: 5
-      encode: pt
-      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Legado de texto
-  - save: 0
-    languageData:
-      languageName: 6
-      encode: fr
-      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "H\xE9ritage du texte"
-  - save: 0
-    languageData:
-      languageName: 7
-      encode: vi
-      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "Di s\u1EA3n v\u0103n b\u1EA3n"
+  languageDataList: []
   localizedDataTextList: []

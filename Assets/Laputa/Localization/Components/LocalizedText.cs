@@ -38,7 +38,6 @@ namespace Laputa.Localization.Components
 
         private void UpdateLocalizedDataText()
         {
-            //Debug.Log("Log 1 text");
             if (TextMeshProUGUI)
             {
                 var tmpText = TextMeshProUGUI.text;
@@ -60,8 +59,7 @@ namespace Laputa.Localization.Components
         public void UpdateCurrentLanguage(LanguageName languageName)
         {
             var data = GetLanguageLocalizedData();
-            //var languageTemp = data.languageData.languageName;
-            
+
             if (TextMeshProUGUI)
             {
                 TextMeshProUGUI.text = data.text;

@@ -25,7 +25,7 @@ namespace Laputa.Localization
             var response = await Client.GetAsync(url);
             response.EnsureSuccessStatusCode();
 
-            Debug.Log(response.EnsureSuccessStatusCode());
+            Debug.LogWarning(response.EnsureSuccessStatusCode());
         
             string responseBody = await response.Content.ReadAsStringAsync();
             var responseJson = JArray.Parse(responseBody);

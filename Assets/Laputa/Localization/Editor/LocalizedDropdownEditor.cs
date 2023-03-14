@@ -27,7 +27,7 @@ namespace Laputa.Localization.Editor
                     localizedDropdown.UpdateOptions();
                 }
             }
-            
+
             serializedObject.ApplyModifiedProperties();
         }
     }
