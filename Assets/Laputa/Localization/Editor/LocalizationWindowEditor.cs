@@ -39,6 +39,8 @@ public class LocalizationWindowEditor : EditorWindow
         if (GUILayout.Button("Update"))
         {
             LocalizationManager.OnChangeLanguage(_selectedLanguage);
+            
+            Debug.Log($"<color=green> Change Language To {_selectedLanguage} Succeed </color>");
         }
         
         

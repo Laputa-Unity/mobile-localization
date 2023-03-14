@@ -63,16 +63,20 @@ namespace Laputa.Localization.Components
         {
             var data = GetLanguageLocalizedData();
 
-            if (TextMeshProUGUI)
+            if (data != null)
             {
-                TextMeshProUGUI.text = data.text;
-                TextMeshProUGUI.font = data.languageData.tmpFontAsset;
+                if (TextMeshProUGUI)
+                {
+                    TextMeshProUGUI.text = data.text;
+                    TextMeshProUGUI.font = data.languageData.tmpFontAsset;
+                }
+                else
+                {
+                    Text.text = data.text;
+                    Text.font = data.languageData.font;
+                }
             }
-            else
-            {
-                Text.text = data.text;
-                Text.font = data.languageData.font;
-            }
+            
             UpdateLocalizedDataText();
         }
 

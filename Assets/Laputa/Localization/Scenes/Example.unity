@@ -695,7 +695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I have {x} cats and {y} dogs
+  m_text: I have 2 cats and 3 dogs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
@@ -2343,6 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8954143cfb95846845ec7513d44f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  localizationConfig: {fileID: 0}
 --- !u!4 &2032792416
 Transform:
   m_ObjectHideFlags: 0
