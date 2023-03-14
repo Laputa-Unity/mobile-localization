@@ -1,17 +1,42 @@
 using System;
-using Laputa.Localization;
 using UnityEngine;
 
-public class LocalizationController : MonoBehaviour
+namespace Laputa.Localization
 {
-    private void Awake()
+    public class LocalizationController : MonoBehaviour
     {
-        LanguageName currentLanguageName = Enum.Parse<LanguageName>(PlayerPrefs.GetString("localization","English"));
-        LocalizationManager.OnChangeLanguage(currentLanguageName);
-    }
+        public static LocalizationController Instance;
+        public LocalizationConfig localizationConfig;
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        
+            LanguageName currentLanguageName = Enum.Parse<LanguageName>(PlayerPrefs.GetString("localization","English"));
+            LocalizationManager.OnChangeLanguage(currentLanguageName);
 
-    private void Update()
-    {
-        //Debug.Log(LocalizationManager.currentLanguageName);
+            if (localizationConfig==null) localizationConfig = Resources.Load<LocalizationConfig>("LocalizationConfig");
+        }
+
+        private void Start()
+        {
+            DontDestroyOnLoad(this);
+        }
+
+        protected void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+        }
+
+        public string GetPreTranslatedText(string content)
+        {
+            return localizationConfig.GetPreTranslated(content, LocalizationManager.currentLanguageName);
+        }
     }
 }

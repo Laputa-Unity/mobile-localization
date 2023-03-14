@@ -17,7 +17,12 @@ namespace Laputa.Localization.Components
 
         private void OnDrawGizmos()
         {
-            if (Application.isPlaying) return;
+            if (Application.isPlaying || String.IsNullOrEmpty(currentText)) return;
+            UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
+        }
+
+        private void OnEnable()
+        {
             UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
         }
 
@@ -40,18 +45,16 @@ namespace Laputa.Localization.Components
         {
             if (TextMeshProUGUI)
             {
-                var tmpText = TextMeshProUGUI.text;
                 foreach (var text in localizedDataTextList)
                 {
-                    tmpText = tmpText.Replace("{" +$"{text.wordReplace}" + "}", text.value);
+                    TextMeshProUGUI.text = TextMeshProUGUI.text.Replace("{" +$"{text.wordReplace}" + "}", text.value);
                 }
             }
             else
             {
-                var textLegacy = Text.text;
                 foreach (var text in localizedDataTextList)
                 {
-                    textLegacy = textLegacy.Replace($"{text.wordReplace}", text.value);
+                    Text.text = Text.text.Replace($"{text.wordReplace}", text.value);
                 }
             }
         }
@@ -76,7 +79,7 @@ namespace Laputa.Localization.Components
         public async void AutoGenerate()
         {
             Debug.Log("<color=green> Start generating ... </color>");
-            LocalizationConfig localizationConfig= Resources.Load<LocalizationConfig>("LocalizationConfig");
+            LocalizationConfig localizationConfig = Resources.Load<LocalizationConfig>("LocalizationConfig");
 
             if (localizationConfig)
             {
@@ -119,6 +122,18 @@ namespace Laputa.Localization.Components
         private LanguageLocalizedData GetLanguage(LanguageData languageData)
         {
             return languageDataList.Find(item => item.languageData.languageName == languageData.languageName);
+        }
+    
+        public void SetValue(string word, string val)
+        {
+            foreach (LocalizedDataText text in localizedDataTextList)
+            {
+                if (text.wordReplace == word)
+                {
+                    text.value = val;
+                    UpdateCurrentLanguage(LocalizationManager.currentLanguageName);
+                }
+            }
         }
     }
 
