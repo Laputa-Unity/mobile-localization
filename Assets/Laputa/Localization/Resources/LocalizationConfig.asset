@@ -36,8 +36,8 @@ MonoBehaviour:
   - languageName: 4
     encode: ru
     sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
-    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-    tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    font: {fileID: 12800000, guid: 85ffa2da2bef62f4bb972f5897545bc9, type: 3}
+    tmpFontAsset: {fileID: 11400000, guid: 1b86122c6bd09154eb914f5caf2c17dd, type: 2}
   - languageName: 5
     encode: pt
     sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
@@ -51,8 +51,8 @@ MonoBehaviour:
   - languageName: 7
     encode: vi
     sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
-    font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-    tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
+    tmpFontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
   localizedDataList:
   - content: hello
     preLocalizedDataList:

@@ -17,7 +17,7 @@ namespace Laputa.Localization
             {
                 Destroy(gameObject);
             }
-        
+            
             LanguageName currentLanguageName = Enum.Parse<LanguageName>(PlayerPrefs.GetString("localization","English"));
             LocalizationManager.OnChangeLanguage(currentLanguageName);
 

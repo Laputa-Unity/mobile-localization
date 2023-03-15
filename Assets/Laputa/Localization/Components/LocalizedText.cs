@@ -83,8 +83,9 @@ namespace Laputa.Localization.Components
         public async void AutoGenerate()
         {
             Debug.Log("<color=green> Start generating ... </color>");
-            LocalizationConfig localizationConfig = Resources.Load<LocalizationConfig>("LocalizationConfig");
 
+            LocalizationConfig localizationConfig = Resources.Load<LocalizationConfig>("LocalizationConfig");
+            
             if (localizationConfig)
             {
                 try

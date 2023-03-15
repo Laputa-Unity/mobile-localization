@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using Laputa.Localization;
 using Laputa.Localization.Components;
+using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LocalizationWindowEditor : EditorWindow
 {
@@ -42,45 +42,20 @@ public class LocalizationWindowEditor : EditorWindow
             
             Debug.Log($"<color=green> Change Language To {_selectedLanguage} Succeed </color>");
         }
-        
-        
+
         //GUILayout.Label ("Use when you want to translate all text in scene using LocalizedText components", EditorStyles.boldLabel);
         if(GUILayout.Button("Translate All In Scene"))
         {
-            var gameObjects = FindObjectsOfType<GameObject>(true).ToList();
-            
-            // Loop through all the GameObjects and add their names to the list
-            foreach (GameObject gameObject in gameObjects)
-            {
-                var localizedText = gameObject.GetComponent<LocalizedText>();
-                if (localizedText)
-                {
-                    localizedText.AutoGenerate();
-                }
-            }
-            
-            EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            TranslateAllInScene();
         }
         
         
         if(GUILayout.Button("Translate All In Prefab Mode"))
         {
-            var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
-
-            if (prefabStage)
-            {
-                var prefabRoot = prefabStage.prefabContentsRoot;
-                List<LocalizedText> localizedTexts = prefabRoot.GetComponentsInChildren<LocalizedText>(true).ToList();
-                foreach (var localizedText in localizedTexts)
-                {       
-                    localizedText.AutoGenerate();
-                }
-
-                PrefabUtility.SaveAsPrefabAsset(prefabRoot, prefabStage.assetPath);
-            }
+            TranslateAllInPrefab();
         }
     }
-    
+
     private void UpdateScripts(LanguageName language)
     {
         _selectedLanguage = language;
@@ -98,4 +73,62 @@ public class LocalizationWindowEditor : EditorWindow
             }
         }
     }
+
+    private void TranslateAllInScene()
+    {
+        var gameObjects = FindObjectsOfType<GameObject>(true).ToList();
+        
+        foreach (GameObject gameObject in gameObjects)
+        {
+            var text = gameObject.GetComponent<Text>();
+            var tmpText = gameObject.GetComponent<TextMeshProUGUI>();
+            var localizedText = gameObject.GetComponent<LocalizedText>();
+            if (localizedText)
+            {
+                localizedText.AutoGenerate();
+            }
+            else
+            {
+                if (tmpText || text)
+                {
+                    var tempLocalizedText = gameObject.gameObject.AddComponent<LocalizedText>();
+                    tempLocalizedText.AutoGenerate();
+                }
+            }
+        }
+            
+        EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+    }
+    
+    private void TranslateAllInPrefab()
+    {
+        var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
+
+        if (prefabStage)
+        {
+            var prefabRoot = prefabStage.prefabContentsRoot;
+            foreach (Transform child in prefabRoot.transform)
+            {
+                var text = child.GetComponent<Text>();
+                var tmpText = child.GetComponent<TextMeshProUGUI>();
+                var localizedText = child.GetComponent<LocalizedText>();
+                if (localizedText)
+                {
+                    localizedText.AutoGenerate();
+                }
+                else
+                {
+                    if (tmpText || text)
+                    {
+                        var tempLocalizedText = child.gameObject.AddComponent<LocalizedText>();
+                        tempLocalizedText.AutoGenerate();
+                    }
+                }
+            }
+
+            PrefabUtility.SaveAsPrefabAsset(prefabRoot, prefabStage.assetPath);
+        }
+    }
+    
+    
 }
