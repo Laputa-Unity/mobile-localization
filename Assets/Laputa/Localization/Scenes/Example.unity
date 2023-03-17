@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_text: Option A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &8987475
@@ -392,10 +392,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: English
+  m_text: Vietnamese
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 424413990}
   - component: {fileID: 424413993}
   - component: {fileID: 424413992}
+  - component: {fileID: 424413994}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -694,10 +695,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I have 2 cats and 3 dogs
+  m_text: "T\xF4i c\xF3 2 con m\xE8o v\xE0 3 con ch\xF3"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -771,6 +772,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424413989}
   m_CullTransparentMesh: 1
+--- !u!114 &424413994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424413989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentText: I have 2 cats and 3 dogs
+  isFirstGenerated: 1
+  languageDataList:
+  - save: 0
+    languageData:
+      languageName: 0
+      encode: en
+      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: I have 2 cats and 3 dogs
+  - save: 0
+    languageData:
+      languageName: 1
+      encode: ja
+      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\u79C1\u306F2\u5339\u306E\u732B\u30683\u5339\u306E\u72AC\u3092\u98FC\u3063\u3066\u3044\u307E\u3059"
+  - save: 0
+    languageData:
+      languageName: 2
+      encode: de
+      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Ich habe 2 Katzen und 3 Hunde
+  - save: 0
+    languageData:
+      languageName: 3
+      encode: ko
+      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\uACE0\uC591\uC774 2\uB9C8\uB9AC\uC640 \uAC1C 3\uB9C8\uB9AC\uAC00 \uC788\uC2B5\uB2C8\uB2E4"
+  - save: 0
+    languageData:
+      languageName: 4
+      encode: ru
+      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
+      font: {fileID: 12800000, guid: 85ffa2da2bef62f4bb972f5897545bc9, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 1b86122c6bd09154eb914f5caf2c17dd, type: 2}
+    text: "\u0443 \u043C\u0435\u043D\u044F 2 \u043A\u043E\u0448\u043A\u0438 \u0438
+      3 \u0441\u043E\u0431\u0430\u043A\u0438"
+  - save: 0
+    languageData:
+      languageName: 5
+      encode: pt
+      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: tenho 2 gatos e 3 cachorros
+  - save: 0
+    languageData:
+      languageName: 6
+      encode: fr
+      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: j'ai 2 chats et 3 chiens
+  - save: 0
+    languageData:
+      languageName: 7
+      encode: vi
+      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+      font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+    text: "T\xF4i c\xF3 2 con m\xE8o v\xE0 3 con ch\xF3"
+  localizedDataTextList: []
 --- !u!1 &483948529
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,13 +1076,14 @@ GameObject:
   - component: {fileID: 797094557}
   - component: {fileID: 797094559}
   - component: {fileID: 797094558}
+  - component: {fileID: 797094560}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &797094557
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1041,10 +1124,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Random string
+  m_text: "Chu\u1ED7i ng\u1EABu nhi\xEAn"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1068,7 +1151,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 67.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1118,6 +1201,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797094556}
   m_CullTransparentMesh: 1
+--- !u!114 &797094560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797094556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentText: Random string
+  isFirstGenerated: 1
+  languageDataList:
+  - save: 0
+    languageData:
+      languageName: 0
+      encode: en
+      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Random string
+  - save: 0
+    languageData:
+      languageName: 1
+      encode: ja
+      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\u30E9\u30F3\u30C0\u30E0\u6587\u5B57\u5217"
+  - save: 0
+    languageData:
+      languageName: 2
+      encode: de
+      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "Zuf\xE4llige Zeichenfolge"
+  - save: 0
+    languageData:
+      languageName: 3
+      encode: ko
+      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\uC784\uC758\uC758 \uBB38\uC790\uC5F4"
+  - save: 0
+    languageData:
+      languageName: 4
+      encode: ru
+      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
+      font: {fileID: 12800000, guid: 85ffa2da2bef62f4bb972f5897545bc9, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 1b86122c6bd09154eb914f5caf2c17dd, type: 2}
+    text: "\u0421\u043B\u0443\u0447\u0430\u0439\u043D\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430"
+  - save: 0
+    languageData:
+      languageName: 5
+      encode: pt
+      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "string aleat\xF3ria"
+  - save: 0
+    languageData:
+      languageName: 6
+      encode: fr
+      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "Cha\xEEne al\xE9atoire"
+  - save: 0
+    languageData:
+      languageName: 7
+      encode: vi
+      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+      font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+    text: "Chu\u1ED7i ng\u1EABu nhi\xEAn"
+  localizedDataTextList: []
 --- !u!1 &801837625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1710,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 8987474}
   m_ItemImage: {fileID: 845301420}
-  m_Value: 0
+  m_Value: 7
   m_Options:
     m_Options:
     - m_Text: English
@@ -1787,7 +1950,6 @@ GameObject:
   - component: {fileID: 1264053003}
   - component: {fileID: 1264053002}
   - component: {fileID: 1264053001}
-  - component: {fileID: 1264053004}
   m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
@@ -1903,29 +2065,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264052999}
   m_CullTransparentMesh: 1
---- !u!114 &1264053004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264052999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentText: 
-  languageDataList:
-  - save: 0
-    languageData:
-      languageName: 0
-      encode: en
-      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
-      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
-      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: 
-  localizedDataTextList: []
 --- !u!1 &1330104534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2152,7 @@ GameObject:
   - component: {fileID: 1391512592}
   - component: {fileID: 1391512595}
   - component: {fileID: 1391512594}
+  - component: {fileID: 1391512596}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2060,10 +2200,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text TMP
+  m_text: "Nh\u1EAFn tin TMP"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2137,6 +2277,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391512591}
   m_CullTransparentMesh: 1
+--- !u!114 &1391512596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391512591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentText: Text TMP
+  isFirstGenerated: 1
+  languageDataList:
+  - save: 0
+    languageData:
+      languageName: 0
+      encode: en
+      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Text TMP
+  - save: 0
+    languageData:
+      languageName: 1
+      encode: ja
+      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\u30C6\u30AD\u30B9\u30C8 TMP"
+  - save: 0
+    languageData:
+      languageName: 2
+      encode: de
+      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Text-TMP
+  - save: 0
+    languageData:
+      languageName: 3
+      encode: ko
+      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\uD14D\uC2A4\uD2B8 TMP"
+  - save: 0
+    languageData:
+      languageName: 4
+      encode: ru
+      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
+      font: {fileID: 12800000, guid: 85ffa2da2bef62f4bb972f5897545bc9, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 1b86122c6bd09154eb914f5caf2c17dd, type: 2}
+    text: "\u0422\u0435\u043A\u0441\u0442 \u0422\u041C\u041F"
+  - save: 0
+    languageData:
+      languageName: 5
+      encode: pt
+      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Texto TMP
+  - save: 0
+    languageData:
+      languageName: 6
+      encode: fr
+      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Texte TMP
+  - save: 0
+    languageData:
+      languageName: 7
+      encode: vi
+      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+      font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+    text: "Nh\u1EAFn tin TMP"
+  localizedDataTextList: []
 --- !u!1 &1903778543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2695,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+    m_Font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -2487,7 +2707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Text Legacy
+  m_Text: "Di s\u1EA3n v\u0103n b\u1EA3n"
 --- !u!222 &2069056975
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2508,6 +2728,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentText: 
-  languageDataList: []
+  currentText: Text Legacy
+  isFirstGenerated: 1
+  languageDataList:
+  - save: 0
+    languageData:
+      languageName: 0
+      encode: en
+      sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Text Legacy
+  - save: 0
+    languageData:
+      languageName: 1
+      encode: ja
+      sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\u30C6\u30AD\u30B9\u30C8\u30EC\u30AC\u30B7\u30FC"
+  - save: 0
+    languageData:
+      languageName: 2
+      encode: de
+      sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Texterbe
+  - save: 0
+    languageData:
+      languageName: 3
+      encode: ko
+      sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "\uD14D\uC2A4\uD2B8 \uB808\uAC70\uC2DC"
+  - save: 0
+    languageData:
+      languageName: 4
+      encode: ru
+      sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
+      font: {fileID: 12800000, guid: 85ffa2da2bef62f4bb972f5897545bc9, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 1b86122c6bd09154eb914f5caf2c17dd, type: 2}
+    text: "\u0422\u0435\u043A\u0441\u0442\u043E\u0432\u043E\u0435 \u043D\u0430\u0441\u043B\u0435\u0434\u0438\u0435"
+  - save: 0
+    languageData:
+      languageName: 5
+      encode: pt
+      sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: Legado de texto
+  - save: 0
+    languageData:
+      languageName: 6
+      encode: fr
+      sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
+      font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+    text: "H\xE9ritage du texte"
+  - save: 0
+    languageData:
+      languageName: 7
+      encode: vi
+      sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+      font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
+      tmpFontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+    text: "Di s\u1EA3n v\u0103n b\u1EA3n"
   localizedDataTextList: []

@@ -10,8 +10,10 @@ namespace Laputa.Localization.Components
     public class LocalizedText : MonoBehaviour
     {
         [SerializeField] [ReadOnly] private string currentText;
+        [SerializeField] private bool isFirstGenerated;
         [SerializeField] private List<LanguageLocalizedData> languageDataList = new List<LanguageLocalizedData>();
         [SerializeField] private List<LocalizedDataText> localizedDataTextList = new List<LocalizedDataText>();
+        
         private TextMeshProUGUI TextMeshProUGUI => GetComponent<TextMeshProUGUI>();
         private Text Text => GetComponent<Text>();
 
@@ -75,15 +77,29 @@ namespace Laputa.Localization.Components
                     Text.text = data.text;
                     Text.font = data.languageData.font;
                 }
+                
+                UpdateLocalizedDataText();
             }
-            
-            UpdateLocalizedDataText();
         }
 
         public async void AutoGenerate()
         {
             Debug.Log("<color=green> Start generating ... </color>");
 
+            if (!isFirstGenerated)
+            {
+                if (TextMeshProUGUI)
+                {
+                    currentText = TextMeshProUGUI.text;
+                }
+                else if (Text)
+                {
+                    currentText = Text.text;
+                }
+
+                isFirstGenerated = true;
+            }
+            
             LocalizationConfig localizationConfig = Resources.Load<LocalizationConfig>("LocalizationConfig");
             
             if (localizationConfig)
