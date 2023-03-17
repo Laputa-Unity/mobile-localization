@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,10 +392,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vietnamese
+  m_text: English
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
-  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -695,10 +695,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "T\xF4i c\xF3 2 con m\xE8o v\xE0 3 con ch\xF3"
+  m_text: I have 2 cats and 3 dogs
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
-  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1124,10 +1124,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Chu\u1ED7i ng\u1EABu nhi\xEAn"
+  m_text: Random string
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
-  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.75
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1279,7 +1279,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 7b0d8b34dfa5f42498ac6b2c4afb6fa3, type: 3}
       font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
-    text: "Chu\u1ED7i ng\u1EABu nhi\xEAn"
+    text: "chu\u1ED7i ng\u1EABu nhi\xEAn"
   localizedDataTextList: []
 --- !u!1 &801837625
 GameObject:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 8987474}
   m_ItemImage: {fileID: 845301420}
-  m_Value: 7
+  m_Value: 0
   m_Options:
     m_Options:
     - m_Text: English
@@ -2200,10 +2200,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nh\u1EAFn tin TMP"
+  m_text: Texting TMP
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
-  m_sharedMaterial: {fileID: 3841743121012205803, guid: efe3698275e827848b43e5a9c8f2a4f4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
+  m_sharedMaterial: {fileID: 4336404976236956249, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentText: Text TMP
+  currentText: Texting TMP
   isFirstGenerated: 1
   languageDataList:
   - save: 0
@@ -2299,7 +2299,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Text TMP
+    text: Texting TMP
   - save: 0
     languageData:
       languageName: 1
@@ -2307,7 +2307,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: f55a22613dde2a94daccc960288670d2, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\u30C6\u30AD\u30B9\u30C8 TMP"
+    text: "\u30C6\u30AD\u30B9\u30C8\u30E1\u30C3\u30BB\u30FC\u30B8 TMP"
   - save: 0
     languageData:
       languageName: 2
@@ -2315,7 +2315,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: f4aa59e93f3c3df4ca432d64dca6f7c1, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Text-TMP
+    text: SMS TMP
   - save: 0
     languageData:
       languageName: 3
@@ -2323,7 +2323,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\uD14D\uC2A4\uD2B8 TMP"
+    text: "\uBB38\uC790 TMP"
   - save: 0
     languageData:
       languageName: 4
@@ -2331,7 +2331,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 5633ad8e2e7c535498db531bf7d28209, type: 3}
       font: {fileID: 12800000, guid: 85ffa2da2bef62f4bb972f5897545bc9, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 1b86122c6bd09154eb914f5caf2c17dd, type: 2}
-    text: "\u0422\u0435\u043A\u0441\u0442 \u0422\u041C\u041F"
+    text: "\u0422\u0435\u043A\u0441\u0442\u043E\u0432\u044B\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u044F
+      TMP"
   - save: 0
     languageData:
       languageName: 5
@@ -2339,7 +2340,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: bbe070880a31c56488c28c05950e2d5f, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Texto TMP
+    text: TMP de mensagens de texto
   - save: 0
     languageData:
       languageName: 6
@@ -2347,7 +2348,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 8a6dcc3d5769ce74c8651da6ae80fd46, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Texte TMP
+    text: SMS TMP
   - save: 0
     languageData:
       languageName: 7
@@ -2551,7 +2552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8954143cfb95846845ec7513d44f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localizationConfig: {fileID: 11400000, guid: 5d84f38f3893c0844acaaddee4dc74a4, type: 2}
+  localizationConfig: {fileID: 0}
 --- !u!4 &2032792416
 Transform:
   m_ObjectHideFlags: 0
@@ -2695,7 +2696,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 776b49ffcdb2a1f42872bfb9d72993dd, type: 3}
+    m_Font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -2707,7 +2708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Di s\u1EA3n v\u0103n b\u1EA3n"
+  m_Text: Text legacy
 --- !u!222 &2069056975
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2728,7 +2729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b16fd6a2f811c3458429bcb6aa428b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentText: Text Legacy
+  currentText: Text legacy
   isFirstGenerated: 1
   languageDataList:
   - save: 0
@@ -2738,7 +2739,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: c86d859501ce3f64daf5ed8861c2f507, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: Text Legacy
+    text: Text legacy
   - save: 0
     languageData:
       languageName: 1
@@ -2762,7 +2763,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 2c43d2cdcf90f1c449973258743e5470, type: 3}
       font: {fileID: 12800000, guid: bb4c786385cb06247bebe7a28ab7e178, type: 3}
       tmpFontAsset: {fileID: 11400000, guid: 98d0d209208b35f4fac01695a397a6b5, type: 2}
-    text: "\uD14D\uC2A4\uD2B8 \uB808\uAC70\uC2DC"
+    text: "\uD14D\uC2A4\uD2B8 \uC720\uC0B0"
   - save: 0
     languageData:
       languageName: 4

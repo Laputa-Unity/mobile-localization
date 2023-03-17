@@ -107,6 +107,22 @@ public class LocalizationWindowEditor : EditorWindow
         if (prefabStage)
         {
             var prefabRoot = prefabStage.prefabContentsRoot;
+            var rootText = prefabRoot.GetComponent<Text>();
+            var rootTmpText = prefabRoot.GetComponent<TextMeshProUGUI>();
+            var rootLocalizedText = prefabRoot.GetComponent<LocalizedText>();
+            if (rootLocalizedText)
+            {
+                rootLocalizedText.AutoGenerate();
+            }
+            else
+            {
+                if (rootTmpText || rootText)
+                {
+                    var tempLocalizedText = rootTmpText.gameObject.AddComponent<LocalizedText>();
+                    tempLocalizedText.AutoGenerate();
+                }
+            }
+            
             foreach (Transform child in prefabRoot.transform)
             {
                 var text = child.GetComponent<Text>();
