@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="911b61c7-ebf0-47f0-a0b2-b9a35983f2f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Localization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/Localization.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/Localization.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/Scenes/Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/Scenes/Example.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/package.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Laputa/Localization/Scenes/Example.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_SubMeshUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.7.2/Editor/Manipulators/EditModeInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
@@ -111,6 +110,7 @@
       <workItem from="1678874695551" duration="4012000" />
       <workItem from="1678885148886" duration="1423000" />
       <workItem from="1679020740600" duration="1338000" />
+      <workItem from="1679297758728" duration="3937000" />
     </task>
     <servers />
   </component>

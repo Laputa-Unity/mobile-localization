@@ -38,5 +38,10 @@ namespace Laputa.Localization
         {
             return localizationConfig.GetPreTranslated(content, LocalizationManager.currentLanguageName);
         }
+        
+        public LanguageData GetLanguageData(LanguageName languageName)
+        {
+            return localizationConfig.GetLanguageData(languageName);
+        }
     }
 }
