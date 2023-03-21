@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="911b61c7-ebf0-47f0-a0b2-b9a35983f2f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Localization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/Scenes/Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/Scenes/Example.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/Resources/LocalizationConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/Resources/LocalizationConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +42,7 @@
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -110,7 +111,9 @@
       <workItem from="1678874695551" duration="4012000" />
       <workItem from="1678885148886" duration="1423000" />
       <workItem from="1679020740600" duration="1338000" />
-      <workItem from="1679297758728" duration="3937000" />
+      <workItem from="1679297758728" duration="4991000" />
+      <workItem from="1679368704979" duration="1000" />
+      <workItem from="1679369013740" duration="861000" />
     </task>
     <servers />
   </component>
