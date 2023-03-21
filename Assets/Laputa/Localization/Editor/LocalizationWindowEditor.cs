@@ -102,49 +102,43 @@ public class LocalizationWindowEditor : EditorWindow
     
     private void TranslateAllInPrefab()
     {
-        var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
-
+         var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
+        
         if (prefabStage)
         {
             var prefabRoot = prefabStage.prefabContentsRoot;
-            var rootText = prefabRoot.GetComponent<Text>();
-            var rootTmpText = prefabRoot.GetComponent<TextMeshProUGUI>();
-            var rootLocalizedText = prefabRoot.GetComponent<LocalizedText>();
-            if (rootLocalizedText)
-            {
-                rootLocalizedText.AutoGenerate();
-            }
-            else
-            {
-                if (rootTmpText || rootText)
-                {
-                    var tempLocalizedText = rootTmpText.gameObject.AddComponent<LocalizedText>();
-                    tempLocalizedText.AutoGenerate();
-                }
-            }
+            var tmpTextList = prefabRoot.GetComponentsInChildren<TextMeshProUGUI>(true).ToList();
+            var textList = prefabRoot.GetComponentsInChildren<Text>(true).ToList();
             
-            foreach (Transform child in prefabRoot.transform)
+            foreach (var tempText in tmpTextList)
             {
-                var text = child.GetComponent<Text>();
-                var tmpText = child.GetComponent<TextMeshProUGUI>();
-                var localizedText = child.GetComponent<LocalizedText>();
+                var localizedText = tempText.GetComponent<LocalizedText>();
                 if (localizedText)
                 {
                     localizedText.AutoGenerate();
                 }
                 else
                 {
-                    if (tmpText || text)
-                    {
-                        var tempLocalizedText = child.gameObject.AddComponent<LocalizedText>();
-                        tempLocalizedText.AutoGenerate();
-                    }
+                    var tempLocalizedText = tempText.gameObject.AddComponent<LocalizedText>();
+                    tempLocalizedText.AutoGenerate();
+                }
+            }
+            
+            foreach (var text in textList)
+            {
+                var localizedText = text.GetComponent<LocalizedText>();
+                if (localizedText)
+                {
+                    localizedText.AutoGenerate();
+                }
+                else
+                {
+                    var tempLocalizedText = text.gameObject.AddComponent<LocalizedText>();
+                    tempLocalizedText.AutoGenerate();
                 }
             }
 
             PrefabUtility.SaveAsPrefabAsset(prefabRoot, prefabStage.assetPath);
         }
     }
-    
-    
 }

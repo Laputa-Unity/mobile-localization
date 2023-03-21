@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="911b61c7-ebf0-47f0-a0b2-b9a35983f2f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Localization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/LocalizationEnum.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/Resources/LocalizationConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/Resources/LocalizationConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Laputa/Localization/Editor/LocalizationWindowEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Laputa/Localization/Editor/LocalizationWindowEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +112,7 @@
       <workItem from="1679297758728" duration="4991000" />
       <workItem from="1679368704979" duration="1000" />
       <workItem from="1679369013740" duration="861000" />
+      <workItem from="1679394756264" duration="715000" />
     </task>
     <servers />
   </component>
