@@ -85,7 +85,7 @@ namespace Laputa.Localization.Components
         public async void AutoGenerate()
         {
             Debug.Log("<color=green> Start generating ... </color>");
-
+            
             if (!isFirstGenerated)
             {
                 if (TextMeshProUGUI)
@@ -98,6 +98,12 @@ namespace Laputa.Localization.Components
                 }
 
                 isFirstGenerated = true;
+            }
+
+            if (string.IsNullOrEmpty(currentText))
+            {
+                Debug.Log("<color=red> Text empty </color>");
+                return;
             }
             
             LocalizationConfig localizationConfig = Resources.Load<LocalizationConfig>("LocalizationConfig");

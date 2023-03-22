@@ -44,15 +44,25 @@ public class LocalizationWindowEditor : EditorWindow
         }
 
         //GUILayout.Label ("Use when you want to translate all text in scene using LocalizedText components", EditorStyles.boldLabel);
-        if(GUILayout.Button("Translate All In Scene"))
+        if(GUILayout.Button("Add LocalizedText In Scene"))
         {
             TranslateAllInScene();
         }
         
+        if(GUILayout.Button("Remove LocalizedText In Scene"))
+        {
+            RemoveAllInScene();
+        }
         
-        if(GUILayout.Button("Translate All In Prefab Mode"))
+        
+        if(GUILayout.Button("Add LocalizedText In Prefab Mode"))
         {
             TranslateAllInPrefab();
+        }
+
+        if(GUILayout.Button("Remove LocalizedText In Prefab Mode"))
+        {
+            RemoveAllInPrefab();
         }
     }
 
@@ -135,6 +145,55 @@ public class LocalizationWindowEditor : EditorWindow
                 {
                     var tempLocalizedText = text.gameObject.AddComponent<LocalizedText>();
                     tempLocalizedText.AutoGenerate();
+                }
+            }
+
+            PrefabUtility.SaveAsPrefabAsset(prefabRoot, prefabStage.assetPath);
+        }
+    }
+    
+    private void RemoveAllInScene()
+    {
+        var gameObjects = FindObjectsOfType<GameObject>(true).ToList();
+        
+        foreach (GameObject gameObject in gameObjects)
+        {
+            var localizedText = gameObject.GetComponent<LocalizedText>();
+            if(localizedText != null)
+            {
+                // Remove the component from the game object
+                
+            }
+        }
+            
+        EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+    }
+    
+    private void RemoveAllInPrefab()
+    {
+         var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
+        
+        if (prefabStage)
+        {
+            var prefabRoot = prefabStage.prefabContentsRoot;
+            var tmpTextList = prefabRoot.GetComponentsInChildren<TextMeshProUGUI>(true).ToList();
+            var textList = prefabRoot.GetComponentsInChildren<Text>(true).ToList();
+            
+            foreach (var tempText in tmpTextList)
+            {
+                var localizedText = tempText.GetComponent<LocalizedText>();
+                if (localizedText)
+                {
+                    DestroyImmediate(localizedText);
+                }
+            }
+            
+            foreach (var text in textList)
+            {
+                var localizedText = text.GetComponent<LocalizedText>();
+                if (localizedText)
+                {
+                    DestroyImmediate(localizedText);
                 }
             }
 
